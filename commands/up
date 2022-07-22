@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ruta=$(pwd)
+type=$1
+name=$2
+
+if [ $type == "file" ]
+then
+    sudo cp $ruta"/"$name /var/www/html
+elif [ $type == "folder" ]
+then
+    sudo cp -r $ruta"/"$name /var/www/html
+else
+    echo "Modo de uso : up file program.sh"
+fi

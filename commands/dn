@@ -1,0 +1,14 @@
+#!/bin/bash
+
+type=$1
+name=$2
+
+if [ $type == "file" ]
+then
+    sudo rm /var/www/html/$name
+elif [ $type == "folder" ]
+then
+    sudo rm -r /var/www/html/$name
+else
+    echo "Modo de uso : dn file wi.py"
+fi
