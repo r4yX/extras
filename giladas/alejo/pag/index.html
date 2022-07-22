@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alejo</title>
+    <script src="main.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial;
+        }
+        #b-conteiner {
+            background-color: rgb(65, 65, 65);
+            border-radius: 8px;
+            border: 2px solid rgb(0, 0, 0);
+            justify-content: center;
+            text-align: center;
+            padding: 18px;
+            width: 60%;
+            margin: 0px 20%;
+        }
+        button {
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            margin: 0px 30px;
+        }
+        img {
+            display: none;
+            position: absolute;
+            left: 610px;
+            right: 0;
+            top: 200px;
+            bottom: 0;
+            height: 200px;
+            width: 200px;
+            justify-content: center;
+            text-align: center;
+        }
+        @keyframes explosion {
+            from {
+                height: 60px;
+                width: 60px;
+                top: 310px;
+                left: 720px;
+            }
+            to {
+                height: 300px;
+                top: 130px;
+                left: 560px;
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="b-conteiner">
+        <button style="background-color: red;" onclick="send_color('0')">Rojo</button>
+        <button style="background-color: yellow;" onclick="send_color('1')">Amarillo</button>
+        <button style="background-color: rgb(0, 255, 0);" onclick="send_color('2')">Verde</button>
+    </div>
+
+    <img src="img/explosion.png" id="explosion" style="height: 60px; width: 60px;">
+    <img src="img/caca.png" id="caca">
+    <img src="img/helado.png" id="helado">
+    <img src="img/dinero.png" id="dinero">
+</body>
+</html>

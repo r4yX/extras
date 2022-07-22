@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function charge_img(){
+            direccion = prompt("URL")
+            let imagen = document.getElementById('fotito')
+            imagen.setAttribute('src', direccion)
+        }
+        function trompo(action) {
+            let imagen = document.getElementById('fotito')
+            if (action == "activar"){
+                imagen.style.animation = "girador 2s linear infinite"
+            }
+            else if (action == "detener") {
+                imagen.style.animation = ""
+            }
+        }
+    </script>
+    <style>
+        @keyframes girador {
+            from {transform: rotate(0deg);}
+            to {transform: rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <img src="" id="fotito" height="300px">
+    <button onclick="trompo('activar')">GIRAR</button>
+    <button onclick="trompo('detener')">PARAR</button>
+    <button onclick="charge_img()">CAMBIAR IMAGEN</button>
+</body>
+</html>
